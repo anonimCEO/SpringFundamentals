@@ -11,18 +11,16 @@ public class Main {
         ApplicationContext context =
                 new AnnotationConfigApplicationContext(ConfigClass.class);
 
-        Driver driverBean = context.getBean(Driver.class);
-        driverBean.setDriverName("Gicu");
-
         Car carBean = context.getBean(Car.class);
-        System.out.println("Driver name is set to: " + carBean.getCarDriver().getDriverName());
+
+        carBean.setCarModel("Honda");
+        carBean.setCarEngineCapacity(1.8);
+        System.out.println("Car driver name is: " + carBean.getCarDriver().getDriverName());
+        System.out.println("Car model is: " + carBean.getCarModel());
+        System.out.println("Engine capacity: " + carBean.getCarEngineCapacity());
 
 
-        Bus busBean = context.getBean(Bus.class);
 
-        System.out.println("Car driver name: " + busBean.getBusDriver().getDriverName());
-        System.out.println("Bus engine capacity: " + busBean.getBusEngineCapacity());
-        System.out.println("Bus driver name: " + driverBean.getDriverName());
-        System.out.println("Driver Age: " + busBean.getBusDriver().getDriverAge());
+
     }
 }

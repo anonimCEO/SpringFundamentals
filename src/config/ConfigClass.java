@@ -9,23 +9,4 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan("model")
 public class ConfigClass {
 
-    @Bean
-    Car getCar(){
-        Car car = new Car();
-        car.setCarDriver(getCarDriver());
-        return car;
-    }
-
-    @Bean
-    Driver getCarDriver(){
-        return new Driver();
-    }
-
-    @Bean
-    Bus getBus(){
-        Bus bus = new Bus("Ikarus",4.5,getCarDriver());
-        bus.setBusDriver(getCarDriver());
-        return bus;
-    }
-
 }

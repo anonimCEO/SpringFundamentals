@@ -1,5 +1,8 @@
 package model;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Driver {
     private String driverName = "Andrei";
     private int driverAge = 35;

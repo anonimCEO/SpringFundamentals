@@ -1,15 +1,13 @@
 package model;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Bus implements Transport {
+
     private String busModel;
     private double busEngineCapacity;
     private Driver busDriver;
-
-    public Bus(String busModel, double busEngineCapacity, Driver busDriver) {
-        this.busModel = busModel;
-        this.busEngineCapacity = busEngineCapacity;
-        this.busDriver = busDriver;
-    }
 
     public String getBusModel() {
         return busModel;

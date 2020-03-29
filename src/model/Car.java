@@ -1,9 +1,15 @@
 package model;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Car implements Transport{
+    @Autowired
+    private Driver carDriver;
     private String carModel;
     private double carEngineCapacity;
-    private Driver carDriver;
 
     public String getCarModel() {
         return carModel;
