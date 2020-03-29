@@ -4,16 +4,24 @@ import org.springframework.stereotype.Component;
 
 
 public class Driver {
-    private String driverName = "Andrei";
+    private String CarDriverName = "Andrei";
+    private String BusDriverName = "Ion";
     private int driverAge = 35;
 
-
-    public String getDriverName() {
-        return driverName;
+    public String getCarDriverName() {
+        return CarDriverName;
     }
 
-    public void setDriverName(String driverName) {
-        this.driverName = driverName;
+    public void setCarDriverName(String carDriverName) {
+        CarDriverName = carDriverName;
+    }
+
+    public String getBusDriverName() {
+        return BusDriverName;
+    }
+
+    public void setBusDriverName(String busDriverName) {
+        BusDriverName = busDriverName;
     }
 
     public int getDriverAge() {
@@ -23,5 +31,4 @@ public class Driver {
     public void setDriverAge(int driverAge) {
         this.driverAge = driverAge;
     }
-
 }
