@@ -9,4 +9,9 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan("model")
 public class ConfigClass {
 
+    @Bean
+    Driver getCarDriver(){
+        return new Driver();
+    }
+
 }
