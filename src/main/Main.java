@@ -15,7 +15,9 @@ public class Main {
 
         carBean.setCarModel("Honda");
         carBean.setCarEngineCapacity(1.8);
-        System.out.println("Car driver name is: " + carBean.getCarDriver().getCarDriverName());
+        carBean.getCarDriver().setDriverName("Andrei"); //look here
+
+        System.out.println("Car driver name is: " + carBean.getCarDriver().getDriverName()); //look here
         System.out.println("Car model is: " + carBean.getCarModel());
         System.out.println("Car engine capacity: " + carBean.getCarEngineCapacity());
 
@@ -23,8 +25,8 @@ public class Main {
         Bus busBean = context.getBean(Bus.class);
         busBean.setBusModel("Ikarus");
         busBean.setBusEngineCapacity(4.2);
-        System.out.println("---------------------------------");
-        System.out.println("Bus driver name is: " + busBean.getBusDriver().getBusDriverName());
+        busBean.getBusDriver().setDriverName("Ion");//look here
+        System.out.println("Bus driver name is: " + busBean.getBusDriver().getDriverName()); //look here
         System.out.println("Bus model is: " + busBean.getBusModel());
         System.out.println("Bus engine capacity: " + busBean.getBusEngineCapacity());
 
